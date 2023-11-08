@@ -21,9 +21,19 @@ xhttp.onreadystatechange = function () {
       rowDiv.classList.add("row");
       // setting the inner HTML to be more HTML elements by creating as a string
       rowDiv.innerHTML = `
-      <h5 class="company">${row.company}</h5>
-      <h3 class="position">${row.position}</h3>
-      <p class="location">${row.location}</p>
+      <div class="left-section">
+        <h5 class="company">${row.company}</h5>
+        <h3 class="position">${row.position}</h3>
+        <p class="location">${row.location}</p>
+      </div>
+      <div class="mid-section">
+        ${row.tags
+          .map(function (tag) {
+            // for each tag we do function that returns tag in sub-string
+            return `<div class="tag">${tag}</div>`;
+          })
+          .join("")}
+      </div>
       `;
       container.appendChild(rowDiv);
     });

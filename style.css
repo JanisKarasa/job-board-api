@@ -2,6 +2,21 @@
   border: 1px solid gray;
   margin: 10px 0;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section,
+.mid-section {
+  width: 33%;
+}
+
+.mid-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 50%;
+  margin: auto;
 }
 
 .company,
@@ -11,5 +26,14 @@
 }
 
 .location {
+  font-size: 8px;
+}
+
+.tag {
+  margin: 5px;
+  border: 1px solid gray;
+  padding: 2px;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
   font-size: 8px;
 }
