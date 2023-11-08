@@ -34,6 +34,9 @@ xhttp.onreadystatechange = function () {
           })
           .join("")}
       </div>
+      <div class="mid-right-section">
+        ${new Date(row.date).toLocaleString()}
+      </div>
       <div class="right-section">
         <a href=${row.url}>
           <button class="apply-button">Apply</button>
