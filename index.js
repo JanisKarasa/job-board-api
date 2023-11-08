@@ -9,7 +9,14 @@ let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     // Typical action to be performed when the document is ready:
-    document.getElementById("container").innerHTML = xhttp.responseText;
+    // parse data into JS OBJECT
+    let data = JSON.parse(xhttp.responseText);
+    // looping through rows of the data object and index of the rows
+    data.forEach(function (row, i) {
+      // and printing them out to see how many rows we have
+      console.log(row, i);
+      // and we get every single job
+    });
   }
 };
 xhttp.open("GET", "https://remoteok.com/api", true);
