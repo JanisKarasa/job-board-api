@@ -1,7 +1,6 @@
-
 # Dynamic Job Board API
 
-**Live Preview: [Click Me]( )**
+**Live Preview: [Click Me]()**
 
 ---
 
@@ -9,7 +8,8 @@
 
 A project that ties together all the most critical concepts of web dev:
 
-- Async programming 
-- Dynamic data 
+- Async programming
+- Dynamic data
 - DOM methods
 
+Used an API URL https://remoteok.com/api to 'recreate' a job board by fetching data and rendering them as HTML elements.
