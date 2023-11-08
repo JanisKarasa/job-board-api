@@ -11,11 +11,21 @@ xhttp.onreadystatechange = function () {
     // Typical action to be performed when the document is ready:
     // parse data into JS OBJECT
     let data = JSON.parse(xhttp.responseText);
-    // looping through rows of the data object and index of the rows
-    data.forEach(function (row, i) {
-      // and printing them out to see how many rows we have
-      console.log(row, i);
-      // and we get every single job
+    let container = document.getElementById("container");
+    // looping through rows of the data object and index of the rows to extract data from each row in forEach (could be also for loop) to create HTML elements with that
+    // use slice(1) (from 1 through the end) to cut out first row that is some legal information
+    data.slice(1).forEach(function (row, i) {
+      // creating a div
+      let rowDiv = document.createElement("div");
+      // and giving a class name 'row'
+      rowDiv.classList.add("row");
+      // setting the inner HTML to be more HTML elements by creating as a string
+      rowDiv.innerHTML = `
+      <h5 class="company">${row.company}</h5>
+      <h3 class="position">${row.position}</h3>
+      <p class="location">${row.location}</p>
+      `;
+      container.appendChild(rowDiv);
     });
   }
 };
