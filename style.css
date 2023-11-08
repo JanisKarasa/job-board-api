@@ -19,6 +19,13 @@
   margin: auto;
 }
 
+.right-section {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .company,
 .position {
   font-family: 12px;
@@ -36,4 +43,18 @@
   text-transform: uppercase;
   font-family: "Courier New", Courier, monospace;
   font-size: 8px;
+}
+
+.apply-button {
+  background-color: coral;
+  color: white;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 10px 15px;
+  border: none;
+}
+
+.apply-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
 }
