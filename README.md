@@ -1,6 +1,6 @@
 # Dynamic Job Board API
 
-**Live Preview: [Click Me]()**
+**Live Preview: [Click Me](https://job-board-api.netlify.app/)**
 
 ---
 
