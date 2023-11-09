@@ -11,7 +11,12 @@ xhttp.onreadystatechange = function () {
     // Typical action to be performed when the document is ready:
     // parse data into JS OBJECT
     let data = JSON.parse(xhttp.responseText);
+    // console.log(data);
     let container = document.getElementById("container");
+    container.innerHTML = `
+      <div class="header">
+        <h1 class="title">Job Listings from remoteok.com</h1>
+      </div>`;
     // looping through rows of the data object and index of the rows to extract data from each row in forEach (could be also for loop) to create HTML elements with that
     // use slice(1) (from 1 through the end) to cut out first row that is some legal information
     data.slice(1).forEach(function (row, i) {

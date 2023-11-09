@@ -12,4 +12,4 @@ A project that ties together all the most critical concepts of web dev:
 - Dynamic data
 - DOM methods
 
-Used an API URL https://remoteok.com/api to 'recreate' a job board by fetching data and rendering them as HTML elements.
+Used an API URL https://remoteok.com/api to 'recreate' a job board by sending AJAX request and fetching data to render it as HTML elements.
